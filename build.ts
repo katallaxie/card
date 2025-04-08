@@ -6,8 +6,8 @@ import * as path from 'path'
 // Text + chalk definitions
 const data = {
   name: chalk.bold(chalk.whiteBright('           Sebastian Doell')),
-  handle: chalk.bold(chalk.whiteBright('katallaxie')),
-  work: chalk.white('Solution Architect @ ZEISS GROUP'),
+  handle: chalk.bold(chalk.whiteBright('@katallaxie')),
+  work: chalk.white('Senior engineer with decades of experience 🦄.'),
   github: chalk.gray('https://github.com/') + chalk.green('katallaxie'),
   linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('katallaxie'),
   mastodon: chalk.gray('https://hachyderm.io/') + chalk.cyan('@katallaxie'),
