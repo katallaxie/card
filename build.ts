@@ -12,7 +12,6 @@ const data = {
   linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("katallaxie"),
   mastodon: `${chalk.cyan("@katallaxie")}@${chalk.gray("mastodon.social")}`,
   web: chalk.cyan("https://katallaxie.dev"),
-  npx: chalk.red("npx") + " " + chalk.white("@katallaxie/card  (via GitHub Package Registry)"),
   labelWork: chalk.white.bold("    Work:"),
   labelMastodon: chalk.white.bold("Mastodon:"),
   labelGitHub: chalk.white.bold("  GitHub:"),
