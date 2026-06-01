@@ -45,7 +45,7 @@ fs.writeFileSync(
     boxen(output, {
       padding: 1,
       margin: 1,
-      borderStyle: boxen.BorderStyle.Single,
+      borderStyle: 'double',
     }),
   ),
 )
