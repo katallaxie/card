@@ -7,10 +7,10 @@ import * as path from "path"
 const data = {
   name: chalk.bold(chalk.whiteBright("           Sebastian Doell")),
   handle: chalk.bold(chalk.whiteBright("@katallaxie")),
-  work: chalk.white("Senior engineer with decades of experience 🦄."),
+  work: `${chalk.white("Enterprise Architect")} ${chalk.yellow("@")} ${chalk.white("ZEISS 🦄.")}`,
   github: chalk.gray("https://github.com/") + chalk.green("katallaxie"),
   linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("katallaxie"),
-  mastodon: chalk.gray("https://hachyderm.io/") + chalk.cyan("@katallaxie"),
+  mastodon: `${chalk.cyan("@katallaxie")}@${chalk.gray("mastodon.social")}`,
   web: chalk.cyan("https://katallaxie.dev"),
   npx: chalk.red("npx") + " " + chalk.white("@katallaxie/card  (via GitHub Package Registry)"),
   labelWork: chalk.white.bold("    Work:"),
@@ -18,7 +18,6 @@ const data = {
   labelGitHub: chalk.white.bold("  GitHub:"),
   labelLinkedIn: chalk.white.bold("LinkedIn:"),
   labelWeb: chalk.white.bold("     Web:"),
-  labelCard: chalk.white.bold("    Card:"),
 }
 
 // Preformating strings
@@ -28,7 +27,6 @@ const toot = `${data.labelMastodon}  ${data.mastodon}`
 const githubing = `${data.labelGitHub}  ${data.github}`
 const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`
 const webing = `${data.labelWeb}  ${data.web}`
-const carding = `${data.labelCard}  ${data.npx}`
 
 // Putting it into a variable that we can easily use for boxen
 const output = `
@@ -40,8 +38,6 @@ ${githubing}
 ${linkedining}
 ${toot}
 ${webing}
-
-${carding}
 `
 
 fs.writeFileSync(
