@@ -1,10 +1,10 @@
 module.exports = {
   // Prettier
-  './*.{json,md}': ['prettier --write'],
+  "./*.{json,md}": ["prettier --write"],
 
   // Eslint
-  '**/*.{ts,tsx}': ['eslint --fix'],
+  "**/*.{ts,tsx}": ["eslint --fix"],
 
   // Jest
-  '**/*.{ml,mli,mly,ts,js,json}': 'jest --passWithNoTests',
+  "**/*.{ml,mli,mly,ts,js,json}": "jest --passWithNoTests",
 }

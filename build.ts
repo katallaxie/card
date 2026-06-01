@@ -1,27 +1,24 @@
-import chalk from 'chalk'
-import boxen from 'boxen'
-import * as fs from 'fs'
-import * as path from 'path'
+import chalk from "chalk"
+import boxen from "boxen"
+import * as fs from "fs"
+import * as path from "path"
 
 // Text + chalk definitions
 const data = {
-  name: chalk.bold(chalk.whiteBright('           Sebastian Doell')),
-  handle: chalk.bold(chalk.whiteBright('@katallaxie')),
-  work: chalk.white('Senior engineer with decades of experience 🦄.'),
-  github: chalk.gray('https://github.com/') + chalk.green('katallaxie'),
-  linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('katallaxie'),
-  mastodon: chalk.gray('https://hachyderm.io/') + chalk.cyan('@katallaxie'),
-  web: chalk.cyan('https://katallaxie.dev'),
-  npx:
-    chalk.red('npx') +
-    ' ' +
-    chalk.white('@katallaxie/card  (via GitHub Package Registry)'),
-  labelWork: chalk.white.bold('    Work:'),
-  labelMastodon: chalk.white.bold('Mastodon:'),
-  labelGitHub: chalk.white.bold('  GitHub:'),
-  labelLinkedIn: chalk.white.bold('LinkedIn:'),
-  labelWeb: chalk.white.bold('     Web:'),
-  labelCard: chalk.white.bold('    Card:')
+  name: chalk.bold(chalk.whiteBright("           Sebastian Doell")),
+  handle: chalk.bold(chalk.whiteBright("@katallaxie")),
+  work: chalk.white("Senior engineer with decades of experience 🦄."),
+  github: chalk.gray("https://github.com/") + chalk.green("katallaxie"),
+  linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("katallaxie"),
+  mastodon: chalk.gray("https://hachyderm.io/") + chalk.cyan("@katallaxie"),
+  web: chalk.cyan("https://katallaxie.dev"),
+  npx: chalk.red("npx") + " " + chalk.white("@katallaxie/card  (via GitHub Package Registry)"),
+  labelWork: chalk.white.bold("    Work:"),
+  labelMastodon: chalk.white.bold("Mastodon:"),
+  labelGitHub: chalk.white.bold("  GitHub:"),
+  labelLinkedIn: chalk.white.bold("LinkedIn:"),
+  labelWeb: chalk.white.bold("     Web:"),
+  labelCard: chalk.white.bold("    Card:"),
 }
 
 // Preformating strings
@@ -48,12 +45,12 @@ ${carding}
 `
 
 fs.writeFileSync(
-  path.join(__dirname, 'bin/output'),
+  path.join(__dirname, "bin/output"),
   chalk.yellow(
     boxen(output, {
       padding: 1,
       margin: 1,
-      borderStyle: boxen.BorderStyle.Single
-    })
-  )
+      borderStyle: boxen.BorderStyle.Single,
+    }),
+  ),
 )

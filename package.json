@@ -1,6 +1,6 @@
 {
   "name": "katallaxie",
-  "version": "1.0.20",
+  "version": "0.0.0",
   "description": "A personal card of Sebastian Doell (@katallaxie)",
   "main": "/bin/card.js",
   "bin": {
@@ -12,35 +12,31 @@
   },
   "homepage": "https://katallaxie.dev",
   "scripts": {
-    "prepublish": "npm run build",
     "build": "ts-node build.ts --color=16m",
+    "check": "biome check",
+    "clean": "rm -rf node_modules package-lock.json",
     "dev": "npm run build && node ./bin/card.js",
-    "lint": "standard",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rm -rf node_modules package-lock.json"
+    "format": "biome format --write",
+    "lint": "biome lint --write",
+    "prepublish": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "card",
-    "npm",
-    "npm card",
-    "npx",
-    "npx card",
-    "business card"
-  ],
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": ["biome check --write --no-errors-on-unmatched"]
+  },
+  "keywords": ["card", "npm", "npm card", "npx", "npx card", "business card"],
   "author": {
     "email": "sebastian@katallaxie.dev",
     "name": "Sebastian Doell (@katallaxie)",
     "url": "https://katallaxie.dev"
   },
   "license": "MIT",
-  "files": [
-    "bin/card.js",
-    "bin/output"
-  ],
+  "files": ["bin/card.js", "bin/output"],
   "dependencies": {
     "clear": "^0.1.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.16",
     "@types/boxen": "^3.0.1",
     "@types/cli-table": "^0.3.1",
     "@types/node": "^20.4.1",
@@ -50,10 +46,6 @@
     "chalk": "^4.1.0",
     "cli-table": "^0.3.11",
     "console-table-printer": "^2.11.2",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jest": "^27.2.2",
-    "eslint-plugin-prettier": "^5.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },
